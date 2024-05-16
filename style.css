@@ -25,7 +25,35 @@ html{
 body{
   font-size: 1.6rem;
   font-family: var(--primary-font);
-  color: var(--color-white);
-  
+  color: var(--color-black);
+}
 
+.header{ /* flex container */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+@media screen and (max-width: 37.5rem) {
+    .header{
+      display: flex;
+      flex-direction: column;
+
+    }
+}
+.header-logo-text{
+  text-transform: capitalize;
+}
+
+.header-nav-list{
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  text-transform: capitalize;
+
+}
+
+.header-nav-link{
+  text-decoration: none;
+  color: var(--color-black);
 }
