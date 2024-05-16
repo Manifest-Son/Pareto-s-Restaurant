@@ -5,6 +5,10 @@
   border: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 html {
   font-size: 62.5%;
@@ -23,7 +27,46 @@ body {
   font-family: var(--primary-font);
   color: var(--color-black);
 }
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.title-subtitle {
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+.title-maintitle {
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+.about-text {
+  text-align: center;
+  letter-spacing: 1.8px;
+  font-size: 1.4rem;
+  color: #888;
+  line-height: 1.7;
+}
+.about-cta {
+  display: block;
+  width: max-content;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin: 0 auto;
+}
+.about-textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 .header {
   /* flex container */
   display: flex;
@@ -78,6 +121,7 @@ body {
   font-family: var(--secondary-font);
   text-transform: capitalize;
   font-size: 6rem;
+  color: var(--color-primary);
 }
 .text-main-title {
   text-transform: uppercase;
@@ -96,5 +140,43 @@ body {
 @media screen and (max-width: 25em) {
   .text-subtitle {
     font-size: 4rem;
+  }
+}
+
+.about {
+  padding: 6rem 12rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 3rem;
+}
+@media screen and (max-width: 62.5em) {
+  .about {
+    padding: 6rem 0.8rem;
+  }
+}
+@media screen and (max-width: 53.125em) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.about-img {
+  width: 50rem;
+  border-radius: 15px;
+  transition: all 0.5 ease;
+}
+.about-img:hover {
+  transform: scale(1.02);
+}
+@media screen and (max-width: 31.25em) {
+  .about-img {
+    width: 100%;
+    border-radius: 15px;
+    transition: all 0.5s ease;
   }
 }
